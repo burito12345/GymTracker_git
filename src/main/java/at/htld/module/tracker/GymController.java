@@ -19,8 +19,4 @@ public class GymController {
         return "gyms/index";
     }
 
-    @RequestMapping(value = "/ficken", method = RequestMethod.GET)
-    public String listficken() {
-        return "gyms/index";
-    }
 }
