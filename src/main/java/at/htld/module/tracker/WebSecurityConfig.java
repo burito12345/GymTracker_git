@@ -19,6 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/index").permitAll()
+                .antMatchers("/admin/**").access("hasRole('ADMIN')")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
@@ -34,6 +35,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
         auth
                 .inMemoryAuthentication()
-                .withUser("admin").password("1234").roles("USER");
+                .withUser("admin").password("1234").roles("ADMIN");
+
+        auth
+                .inMemoryAuthentication()
+                .withUser("husein").password("1234").roles("USER");
     }
 }
