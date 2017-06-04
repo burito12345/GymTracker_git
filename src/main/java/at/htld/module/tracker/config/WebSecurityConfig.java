@@ -1,4 +1,4 @@
-package at.htld.module.tracker;
+package at.htld.module.tracker.config;
 
 /**
  * Created by Ermin Kameric on 30.05.2017.
@@ -19,7 +19,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/index").permitAll()
-                .antMatchers("/admin/**").access("hasRole('ADMIN')")
+                .antMatchers("/admin").access("hasRole('ADMIN')")
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()

@@ -5,7 +5,7 @@ package at.htld.module.tracker.controller;
  */
 
 import at.htld.module.tracker.entity.User;
-import at.htld.module.tracker.entity.UserRepository;
+import at.htld.module.tracker.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -72,8 +72,9 @@ public class AdminController {
     public ModelAndView create(@RequestParam("firstName") String firstName,
                                @RequestParam("lastName") String lastName,
                                @RequestParam("age") int age,
-                               @RequestParam("height") int height) {
-        repository.save(new User(firstName,lastName,age,height));
+                               @RequestParam("height") int height,
+                               @RequestParam("email") String email) {
+        repository.save(new User(firstName,lastName,email,age,height));
         return new ModelAndView("redirect:/admin/list");
     }
 
