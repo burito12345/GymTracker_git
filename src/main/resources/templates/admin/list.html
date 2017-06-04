@@ -2,27 +2,20 @@
 
 <div layout:fragment="content">
 
-    <a class="btn btn-primary" href="/posts/new">Add new post</a>
+    <a class="btn btn-primary" href="/User/new">Add new User</a>
 
     <table >
         <thead>
         <tr>
-            <th>Comments</th>
-            <th>Action</th>
+            <th>Users:</th>
             <th></th>
         </tr>
         </thead>
         <tbody>
         <tr data-th-each="user : ${users}">
-            <td class="name" data-th-text="${user.getFirstName()}"></td>
+            <td class="firstname" data-th-text="${user.getFirstName()}"></td>
+            <td class="lastname" data-th-text="${user.getLastName()}"></td>
 
-            <td>
-
-            </td>
-
-            <td>
-
-            </td>
         </tr>
         </tbody>
     </table>
