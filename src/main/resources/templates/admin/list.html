@@ -2,7 +2,7 @@
 
 <div layout:fragment="content">
 
-    <a class="btn btn-primary" href="/User/new">Add new User</a>
+    <a class="btn btn-primary" href="/admin/new">Add new User</a>
 
     <table >
         <thead>
@@ -15,6 +15,21 @@
         <tr data-th-each="user : ${users}">
             <td class="firstname" data-th-text="${user.getFirstName()}"></td>
             <td class="lastname" data-th-text="${user.getLastName()}"></td>
+
+            <td>
+                <a th:href="@{'/admin/{id}/delete'(id=${user.getId()})}" class="delete" th:attr="name=${user.getFirstName()}">
+                        <span class="fa-stack">
+                            <i class="glyphicon glyphicon-trash"></i>
+                        </span>
+                </a>
+
+                <a th:href="@{'/admin/{id}/edit'(id=${user.getId()})}" class="edit" th:attr="name=${user.getFirstName()}">
+                    <span class="fa-stack">
+                        <i class="glyphicon glyphicon-edit"></i>
+                    </span>
+
+                </a>
+            </td>
 
         </tr>
         </tbody>

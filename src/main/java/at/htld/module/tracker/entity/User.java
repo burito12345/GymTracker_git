@@ -25,8 +25,16 @@ public class User {
     private int age;
     private int height;
 
-    public User() {
+    public User (){
 
+    }
+
+    public User(String firstName, String lastName, int age, int height) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.height = height;
+        password = "default";
     }
 
 
