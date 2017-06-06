@@ -12,10 +12,10 @@
     <title>Spring Boot Web Application</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"/>
-    <link href="/sticky-footer-navbar.css" rel="stylesheet"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <style>
         body {
@@ -84,7 +84,7 @@
 
 <div class="container">
 
-    <div layout:fragment="content">
+    <div layout:fragment="content" class="container-fluid">
         <!-- ============================================================================ -->
         <!-- This content is only used for static prototyping purposes (natural templates)-->
         <!-- and is therefore entirely optional.                                          -->
@@ -104,9 +104,9 @@
 </div>
 <!-- /.container -->
 
-<footer class="footer">
+<footer class="container-fluid bg-4 text-center">
     <div class="container">
-
+        <p class="text-muted">Ermin Kameric</p>
     </div>
 </footer>
 
