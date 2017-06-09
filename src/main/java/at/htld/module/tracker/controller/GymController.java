@@ -19,4 +19,6 @@ public class GymController {
         return "gyms/index";
     }
 
+
+
 }
